@@ -1,0 +1,35 @@
+=retina
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+    @content
+
+=width-between($min, $max)
+  $max : $max - 1
+  $min : $min - 1
+  @media only screen and (min-width : $min * 1px) and (max-width : $max * 1px)
+    @content
+
+=height-between($min, $max)
+  $max : $max - 1
+  $min : $min - 1
+  @media only screen and (min-height : $min * 1px) and (max-height : $max * 1px)
+    @content
+
+=width-lessthan($v)
+  $v : $v - 1
+  @media only screen and (max-width : $v * 1px)
+    @content
+
+=height-lessthan($v)
+  $v : $v - 1
+  @media only screen and (max-height : $v * 1px)
+    @content
+
+=width-morethan($v)
+  $v : $v
+  @media only screen and (min-width : $v * 1px)
+    @content
+
+=height-morethan($v)
+  $v : $v - 1
+  @media only screen and (min-height : $v * 1px)
+    @content
